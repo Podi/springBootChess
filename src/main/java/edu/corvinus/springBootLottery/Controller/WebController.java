@@ -35,4 +35,9 @@ public class WebController {
         model.addAttribute( "validuser", loginForm.getUsername());
         return "main";
     }
+    @GetMapping("logout")
+    public String logout(HttpSession session, LoginForm loginForm){
+        session.invalidate();
+        return  "login";
+    }
 }
