@@ -2,68 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lottery Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Chess</title>
 </head>
 <body>
+<h1>MISSH - "Budapest" ft. Burai Krisztián</h1>
 
-<div id="lottery-container">
+[Intro: MISSH]<br>
+Yeah, te és én<br>
+Ahah, yeah<br>
+2-0-1-5<br>
+Ja, ja, ja<br>
 
-    <h1>Welcome to the Lottery!</h1>
+<br>
 
-    <p>Enter your 5 lucky numbers (1-100) to participate:</p>
+[Refrén: Burai Krisztián]<br>
+Csak bébi te és én<br>
+Ketten Budapesten<br>
+Csapattunk a városban<br>
+Szívtunk egész este<br>
+Tudom másé a szíved<br>
+De az enyém a tested<br>
+Öntöttük a vodkát<br>
+És csináltuk egész este<br>
 
-    <form id="lotteryForm">
-        <label for="luckyNumber1">Number 1:</label>
-        <input type="number" id="luckyNumber1" name="luckyNumber1" min="1" max="100" required>
+<br>
 
-        <label for="luckyNumber2">Number 2:</label>
-        <input type="number" id="luckyNumber2" name="luckyNumber2" min="1" max="100" required>
+[Verze 1: MISSH]<br>
+Yeah<br>
+Mertem álmodni<br>
+Annyi csajom volt, hogy már meg sem tudnád számolni<br>
+Az életem olyan, mint egy film és tudnád bámulni<br>
+Egész nap és nem értheted<br>
+A fellépéseken a pénzeket<br>
+És hogy minden kiscsaj megkap mert<br>
+Mi csak megyünk, és megyünk<br>
+Gyerekek vagyunk örökre<br>
+Tudod, hogy pénzt csinálok<br>
+És soha mi nem megyünk mi tönkre<br>
+Mi csak iszunk, és szívunk<br>
+Én nálad nem vágyok többre<br>
+Csak szívunk, és szívunk<br>
+Én nálad nem vágyok többre<br>
 
-        <label for="luckyNumber3">Number 3:</label>
-        <input type="number" id="luckyNumber3" name="luckyNumber3" min="1" max="100" required>
+<br>
 
-        <label for="luckyNumber4">Number 4:</label>
-        <input type="number" id="luckyNumber4" name="luckyNumber4" min="1" max="100" required>
+[Pre-Chorus: MISSH]<br>
+A szemed is szebben ragyog<br>
+Ha melletted vagyok, és fent van a hold<br>
+Tudod ketten, de csak ma este<br>
+Mert tudod a szerelem mindig mindent elront<br>
+Szívjuk a cigit nincs gond<br>
+Beszélni nem kell, a szemed mindent el mond, yeah<br>
+Csak baszunk, és baszunk, és pont<br>
 
-        <label for="luckyNumber5">Number 5:</label>
-        <input type="number" id="luckyNumber5" name="luckyNumber5" min="1" max="100" required>
+<br>
 
-        <br>
-        <button type="button" onclick="drawLottery()">Submit</button>
-    </form>
+[Refrén: Burai Krisztián]<br>
+Csak bébi te és én<br>
+Ketten Budapesten<br>
+Csapattunk a városban<br>
+Szívtunk egész este<br>
+Tudom másé a szíved<br>
+De az enyém a tested<br>
+Öntöttük a vodkát<br>
+És csináltuk egész este<br>
+Csak bébi te és én<br>
+Ketten Budapesten<br>
+Csapattunk a városban<br>
+Szívtunk egész este<br>
+Tudom másé a szíved<br>
+De az enyém a tested<br>
+Öntöttük a vodkát<br>
+És csináltuk egész este<br>
 
-    <div id="result"></div>
+<br>
 
-</div>
+[Verze 2: MISSH]<br>
+Tudod jól velem ez milyen<br>
+Azt mondtad te nem szívsz, mert te nem vagy ilyen<br>
+Most senki nem kell, hazavigyen<br>
+Csak ketten vagyunk és eljátsszuk a világ a mienk<br>
+A barátod pihen<br>
+Mert tudja ha átjövök, azt mondod igen<br>
+Egy cigire igen, egy baszásra igen<br>
+Még mindig egy lánynál a szívem<br>
+A hátsó zsebében a nevem, ay<br>
+Mindig van egy szép lány, aki benéz ma este, csak te<br>
+Megindulunk ketten<br>
+Csináljuk a cigiket, és leszarunk mindent<br>
+Yeah<br>
 
-<script>
-        function drawLottery() {
-            const luckyNumbers = [
-                document.getElementById('luckyNumber1').value,
-                document.getElementById('luckyNumber2').value,
-                document.getElementById('luckyNumber3').value,
-                document.getElementById('luckyNumber4').value,
-                document.getElementById('luckyNumber5').value
-            ];
+<br>
 
-            const winningNumbers = Array.from({ length: 5 }, () => Math.floor(Math.random() * 100) + 1);
+[Pre-Chorus: MISSH]<br>
+A szemed is szebben ragyog<br>
+Ha melletted vagyok, és fent van a hold<br>
+Tudod ketten, de csak ma este<br>
+Mert tudod a szerelem mindig mindent elront<br>
+Szívjuk a cigit nincs gond<br>
+Beszélni nem kell, a szemed mindent el mond, yeah<br>
+Csak baszunk, és baszunk, és pont, yeah<br>
 
-            let matchCount = 0;
-            for (let i = 0; i < 5; i++) {
-                if (luckyNumbers[i] == winningNumbers[i]) {
-                    matchCount++;
-                }
-            }
+<br>
 
-            if (matchCount === 5) {
-                document.getElementById('result').innerHTML = "<p>Congratulations! You won the lottery with all 5 numbers!</p>";
-            } else {
-                document.getElementById('result').innerHTML = `<p>Sorry, you didn't win this time. You matched ${matchCount} number(s). The winning numbers were ${winningNumbers.join(', ')}.</p>`;
-            }
-        }
-    </script>
-
+[Refrén: Burai Krisztián]<br>
+Csak bébi te és én<br>
+Ketten Budapesten<br>
+Csapattunk a városban<br>
+Szívtunk egész este<br>
+Tudom másé a szíved<br>
+De az enyém a tested<br>
+Öntöttük a vodkát<br>
+És csináltuk egész este<br>
 </body>
 </html>
