@@ -23,7 +23,7 @@ public class WebController {
         if (bindingResult.hasErrors()){
             return "login";
         }
-        return "main";
+        return "index";
     }
     @PostMapping()
     public String checkUser(@Valid LoginForm loginForm, BindingResult bindingResult, Log log, HttpServletRequest request, Model model){
@@ -33,6 +33,6 @@ public class WebController {
         HttpSession session = request.getSession();
         session.setAttribute("validuser", loginForm.getUsername());
         model.addAttribute( "validuser", loginForm.getUsername());
-        return "main";
+        return "index";
     }
 }
